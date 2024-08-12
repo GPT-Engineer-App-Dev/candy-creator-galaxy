@@ -4,7 +4,7 @@ import { Button } from '../components/ui/button';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 p-8">
+    <div className="min-h-screen bg-gradient-to-r from-green-300 via-green-400 to-green-500 p-8">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8 text-white drop-shadow-lg">Design Your Dream Candy</h1>
         <CandyDesigner />
