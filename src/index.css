@@ -74,3 +74,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+.heart-shape {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart-shape::before {
+  left: -50px;
+}
+
+.heart-shape::after {
+  top: -50px;
+}
+
+.star-shape {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
