@@ -79,6 +79,7 @@
   position: relative;
   width: 100px;
   height: 90px;
+  transform: rotate(-45deg);
 }
 
 .heart-shape::before,
@@ -89,7 +90,7 @@
   width: 52px;
   height: 80px;
   border-radius: 50px 50px 0 0;
-  background: currentColor;
+  background: inherit;
 }
 
 .heart-shape::before {

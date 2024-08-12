@@ -12,33 +12,33 @@ const CandyDesigner = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <Card>
+      <Card className="bg-white/50 backdrop-blur-sm">
         <CardContent className="p-6">
-          <h2 className="text-2xl font-semibold mb-4">Customize Your Candy</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Customize Your Candy</h2>
           
           <div className="space-y-6">
             <div>
-              <Label className="text-lg mb-2">Shape</Label>
+              <Label className="text-lg mb-2 text-gray-700">Shape</Label>
               <RadioGroup value={candyShape} onValueChange={setCandyShape} className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="round" id="round" />
-                  <Label htmlFor="round">Round</Label>
+                  <Label htmlFor="round" className="text-gray-600">Round</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="heart" id="heart" />
-                  <Label htmlFor="heart">Heart</Label>
+                  <Label htmlFor="heart" className="text-gray-600">Heart</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="star" id="star" />
-                  <Label htmlFor="star">Star</Label>
+                  <Label htmlFor="star" className="text-gray-600">Star</Label>
                 </div>
               </RadioGroup>
             </div>
 
             <div>
-              <Label htmlFor="flavor" className="text-lg mb-2">Flavor</Label>
+              <Label htmlFor="flavor" className="text-lg mb-2 text-gray-700">Flavor</Label>
               <Select value={candyFlavor} onValueChange={setCandyFlavor}>
-                <SelectTrigger id="flavor">
+                <SelectTrigger id="flavor" className="bg-white/70">
                   <SelectValue placeholder="Select a flavor" />
                 </SelectTrigger>
                 <SelectContent>
@@ -51,9 +51,9 @@ const CandyDesigner = () => {
             </div>
 
             <div>
-              <Label htmlFor="color" className="text-lg mb-2">Color</Label>
+              <Label htmlFor="color" className="text-lg mb-2 text-gray-700">Color</Label>
               <Select value={candyColor} onValueChange={setCandyColor}>
-                <SelectTrigger id="color">
+                <SelectTrigger id="color" className="bg-white/70">
                   <SelectValue placeholder="Select a color" />
                 </SelectTrigger>
                 <SelectContent>
