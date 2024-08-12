@@ -10,10 +10,41 @@ const CandyPreview = ({ shape, flavor, color }) => {
   };
 
   const colorClass = {
-    red: 'bg-red-400',
-    blue: 'bg-blue-400',
-    yellow: 'bg-yellow-400',
-    purple: 'bg-purple-400',
+    red: 'text-red-400',
+    blue: 'text-blue-400',
+    yellow: 'text-yellow-400',
+    purple: 'text-purple-400',
+  };
+
+  const renderShape = () => {
+    switch (shape) {
+      case 'round':
+        return (
+          <motion.div
+            className={`w-32 h-32 rounded-full ${colorClass[color]}`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+          />
+        );
+      case 'heart':
+        return (
+          <motion.div
+            className={`w-32 h-32 ${colorClass[color]} heart-shape`}
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 1, repeat: Infinity }}
+          />
+        );
+      case 'star':
+        return (
+          <motion.div
+            className={`w-32 h-32 ${colorClass[color]} star-shape`}
+            animate={{ rotate: 360, scale: [1, 1.1, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+          />
+        );
+      default:
+        return null;
+    }
   };
 
   return (
@@ -21,11 +52,7 @@ const CandyPreview = ({ shape, flavor, color }) => {
       <CardContent className="p-6">
         <h2 className="text-2xl font-semibold mb-4">Candy Preview</h2>
         <div className="flex justify-center items-center h-64 bg-gray-100 rounded-lg">
-          <motion.div
-            className={`w-32 h-32 ${shapeClass[shape]} ${colorClass[color]}`}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          />
+          {renderShape()}
         </div>
         <div className="mt-4 text-center">
           <p className="text-lg">

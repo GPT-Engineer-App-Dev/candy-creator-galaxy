@@ -76,27 +76,32 @@
 }
 
 .heart-shape {
+  position: relative;
   width: 100px;
   height: 90px;
-  position: relative;
-  transform: rotate(-45deg);
 }
 
 .heart-shape::before,
 .heart-shape::after {
   content: "";
-  width: 100px;
-  height: 100px;
   position: absolute;
-  border-radius: 50%;
+  top: 0;
+  width: 52px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  background: currentColor;
 }
 
 .heart-shape::before {
-  left: -50px;
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
 }
 
 .heart-shape::after {
-  top: -50px;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }
 
 .star-shape {
